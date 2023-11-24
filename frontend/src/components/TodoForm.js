@@ -19,14 +19,18 @@ const TodoForm = () => {
     }
 
     const todo = { title, Description, category };
-    const response = await fetch("http://localhost:4000/api/todos", {
-      method: "POST",
-      body: JSON.stringify(todo),
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${user.token}`,
-      },
-    });
+    const response = await fetch(
+      // "http://localhost:4000/api/todos",
+      "https://todos-tracker.onrender.com/api/todos",
+      {
+        method: "POST",
+        body: JSON.stringify(todo),
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${user.token}`,
+        },
+      }
+    );
     const json = await response.json();
     console.log("create", json);
     if (!response.ok) {

@@ -14,8 +14,8 @@ const TodosDetails = ({ todo }) => {
     }
     alert("Have you completed task?");
     const response = await fetch(
-      "http://localhost:4000/api/todos/" + todo._id,
-      //   "https://tracker-ut2f.onrender.com/api/todos/" + todo._id,
+      // "http://localhost:4000/api/todos/" + todo._id,
+      "https://todos-tracker.onrender.com/api/todos/" + todo._id,
       {
         method: "DELETE",
         headers: {

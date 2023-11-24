@@ -11,7 +11,8 @@ export const useEmailVerify = () => {
     setError(null);
 
     const response = await fetch(
-      `http://localhost:4000/api/user/verify/${_id}/${uniqueString}`,
+      // `http://localhost:4000/api/user/verify/${_id}/${uniqueString}`,
+      `https://todos-tracker.onrender.com/api/user/verify/${_id}/${uniqueString}`,
       {
         method: "GET",
         headers: { "Content-Type": "application/json" },
