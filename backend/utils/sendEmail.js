@@ -25,7 +25,7 @@ const sendEmail = async ({ _id, email }, res) => {
       to: email,
       subject: "Verify your email",
       html: `<p>Verify for your email to complete signup process and login</p><p>Press the link to verify: <a href=${
-        process.env.BASE_URL + "/verify/email/" + _id + "/" + uniqueString
+        process.env.BASE_URL + "verify/email/" + _id + "/" + uniqueString
       }>here</a> </p>`,
     };
     const hashedString = await bcrypt.hash(uniqueString, 10);
